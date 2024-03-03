@@ -2,17 +2,35 @@
 
 Python simple CLI app in Docker container with `docker-compose.yml` and a volume.
 
+## Run Locally
+
+1. `docker compose build goodbuy-app`
 1. `docker compose run --rm goodbuy-app`
-    - `docker compose run` is used to run your service interactively.
+1. `docker images`
+1. `docker rmi <image_id>`
+
+## Run on Remote Docker Host
+
+1. `export DOCKER_HOST=tcp://docker-pi-00:2375`
+1. `docker compose build goodbuy-app`
+1. `docker compose run --rm goodbuy-app`
+1. `docker images`
+1. `docker rmi <image_id>`
+
+## Build and Run
+
+1. `docker compose build goodbuy-app`
+    - This command builds the Docker image for the `goodbuy-app` service defined in `docker-compose.yml`.
+    - `docker compose build` is used to build your service.
+    - `goodbuy-app` is the name of your service defined in `docker-compose.yml`.
+
+1. `docker compose run --rm goodbuy-app`
+    - This command runs the `goodbuy-app` service defined in `docker-compose.yml`.
+    - `docker compose run` is used to run your service.
     - `--rm` automatically removes the container when it exits. This is optional but helps keep your environment clean.
     - `goodbuy-app` is the name of your service defined in `docker-compose.yml`.
 
-## Run the Application
-
-1. `docker compose run --rm goodbuy-app`
-    - `docker compose run` is used to run your service interactively.
-    - `--rm` automatically removes the container when it exits. This is optional but helps keep your environment clean.
-    - `goodbuy-app` is the name of your service defined in `docker-compose.yml`.
+## Additional Information
 
 [Interactive Docker Setup](https://chat.openai.com/share/d2124cc4-35e2-4c09-a1eb-d528e0dea2ca)
 
