@@ -1,7 +1,8 @@
 def main():
-    for i in range(3):
+    num = 3
+    for i in range(num):
         name = input("Please enter your name: ")
-        print(f"{2 - i} loops left!")
+        print(f"{num - 1 - i} loops left!")
         print(f"Goodbuy, {name}! Enjoy the sails and bar guns!")
 
 
